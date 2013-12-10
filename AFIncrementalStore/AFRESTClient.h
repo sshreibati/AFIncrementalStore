@@ -27,7 +27,7 @@
 @protocol AFPaginator;
 
 /**
- `AFRESTClient` is a subclass of `AFHTTPClient` that implements the `AFIncrementalStoreHTTPClient` protocol in a way that follows the conventions of a RESTful web service.
+ `AFRESTClient` is a subclass of `AFHTTPRequestOperationManager` that implements the `AFIncrementalStoreHTTPClient` protocol in a way that follows the conventions of a RESTful web service.
  */
 @interface AFRESTClient : AFHTTPRequestOperationManager <AFIncrementalStoreHTTPClient>
 
@@ -48,7 +48,7 @@
 /**
  Returns the request path for a collection of resources of the specified entity. By default, this returns an imprecise pluralization of the entity name.
 
- @discussion The return value of this method is used as the `path` parameter in other `AFHTTPClient` methods.
+ @discussion The return value of this method is used as the `path` parameter in other `AFHTTPRequestOperation` methods.
 
  @param entity The entity used to determine the resources path.
 
@@ -59,7 +59,7 @@
 /**
  Returns the request path for the resource of a particular managed object. By default, this returns an imprecise pluralization of the entity name, with the additional path component of the resource identifier corresponding to the managed object.
 
- @discussion The return value of this method is used as the `path` parameter in other `AFHTTPClient` methods.
+ @discussion The return value of this method is used as the `path` parameter in other `AFHTTPRequestOperation` methods.
 
  @param object The managed object used to determine the resource path.
 
@@ -70,7 +70,7 @@
 /**
  Returns the request path for the resource of a particular managed object. By default, this returns an imprecise pluralization of the entity name, with the additional path component of either an imprecise pluralization of the relationship destination entity name if the relationship is to-many, or the relationship destination entity name if to-one.
 
- @discussion The return value of this method is used as the `path` parameter in other `AFHTTPClient` methods.
+ @discussion The return value of this method is used as the `path` parameter in other `AFHTTPRequestOperation` methods.
 
  @param relationship The relationship used to determine the resource path
  @param object The managed object used to determine the resource path.
@@ -83,7 +83,7 @@
 /**
  Returns the absolute URL string of the string relative to the base URL.
 
- @discussion The return value of this method is used as the `urlString` parameter in other `AFHTTPClient` methods.
+ @discussion The return value of this method is used as the `urlString` parameter in other `AFHTTPRequestOperation` methods.
 
  @param urlString The string used to create the absolute URL.
 
