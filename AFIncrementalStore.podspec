@@ -8,14 +8,14 @@ Pod::Spec.new do |s|
   s.source   = { :git => 'https://github.com/AFNetworking/AFIncrementalStore.git', :tag => '0.6.0' }
   s.requires_arc = true
 
-  s.ios.deployment_target = '6.0'
+  s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.8'
 
   s.source_files = 'AFIncrementalStore/*.{h,m}'
 
   s.framework  = 'CoreData'
 
-  s.dependency 'AFNetworking', '~> 2.0.0'
+  s.dependency 'AFNetworking', '~> 2.1.0'
   s.dependency 'InflectorKit'
   s.dependency 'TransformerKit'
 end
